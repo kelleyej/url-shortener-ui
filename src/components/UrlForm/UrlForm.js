@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function UrlForm() {
+function UrlForm({addUrl}) {
   const [title, setTitle] = useState('');
   const [urlToShorten, setUrlToShorten] = useState('');
 
@@ -11,6 +11,10 @@ function UrlForm() {
         "Content-type": "application/json"
       }, 
       body: JSON.stringify(longUrl)
+    })
+    .then(res => res.json())
+    .then(data => {
+      addUrl(data)
     })
   }
 
@@ -23,9 +27,7 @@ function UrlForm() {
     postUrls(longUrl)
     clearInputs();
   }
-  console.log('title:', title)
-  console.log('urlToShorten:', urlToShorten)
-
+  
   const clearInputs = () => {
     setTitle('');
     setUrlToShorten('');

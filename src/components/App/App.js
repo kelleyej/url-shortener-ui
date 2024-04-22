@@ -12,14 +12,18 @@ function App () {
     .then(data => setUrls(data.urls))
   }, [])
 
+  function addUrl(longUrl){
+    setUrls([...urls, longUrl])
+  }
+
   return (
     <main className="App">
       <header>
         <h1>URL Shortener</h1>
-        <UrlForm />
+        <UrlForm addUrl={addUrl}/>
       </header>
 
-      <UrlContainer urls={urls}/>
+      <UrlContainer urls={urls} />
     </main>
   );
 }
