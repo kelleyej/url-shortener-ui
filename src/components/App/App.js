@@ -15,7 +15,7 @@ function App () {
   function addUrl(longUrl){
     setUrls([...urls, longUrl])
   }
-
+console.log('URLS:', urls)
   return (
     <main className="App">
       <header>
