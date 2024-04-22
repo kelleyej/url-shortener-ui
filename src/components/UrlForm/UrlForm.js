@@ -1,42 +1,42 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-function UrlForm() {
-  const [title, setTitle] = useState('');
-  const [urlToShorten, setUrlToShorten] = useState('');
+// function UrlForm() {
+//   const [title, setTitle] = useState('');
+//   const [urlToShorten, setUrlToShorten] = useState('');
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    clearInputs();
-  }
+//   const handleSubmit = e => {
+//     e.preventDefault();
+//     clearInputs();
+//   }
 
-  const clearInputs = () => {
-    setTitle('');
-    setUrlToShorten('');
-  }
+//   const clearInputs = () => {
+//     setTitle('');
+//     setUrlToShorten('');
+//   }
 
-  return (
-    <form>
-      <input
-        type='text'
-        placeholder='Title...'
-        name='title'
-        value={title}
-        // onChange={e => }
-      />
+//   return (
+//     <form>
+//       <input
+//         type='text'
+//         placeholder='Title...'
+//         name='title'
+//         value={title}
+//         // onChange={e => }
+//       />
 
-      <input
-        type='text'
-        placeholder='URL to Shorten...'
-        name='title'
-        value={title}
-        // onChange={e => }
-      />
+//       <input
+//         type='text'
+//         placeholder='URL to Shorten...'
+//         name='title'
+//         value={title}
+//         // onChange={e => }
+//       />
 
-      <button onClick={e => handleSubmit(e)}>
-        Shorten Please!
-      </button>
-    </form>
-  )
-}
+//       <button onClick={e => handleSubmit(e)}>
+//         Shorten Please!
+//       </button>
+//     </form>
+//   )
+// }
 
-export default UrlForm;
+// export default UrlForm;
