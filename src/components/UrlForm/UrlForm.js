@@ -16,7 +16,7 @@ function UrlForm({addUrl}) {
     .then(res => res.json())
     .then(data => {
       addUrl(data)
-      console.log(data)
+
     })
     getUrls()
     clearInputs();
