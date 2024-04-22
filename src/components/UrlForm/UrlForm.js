@@ -17,8 +17,8 @@ function UrlForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const longUrl = {
-      title, 
-      urlToShorten
+      title: title, 
+      long_url: urlToShorten
     }
     postUrls(longUrl)
     clearInputs();
