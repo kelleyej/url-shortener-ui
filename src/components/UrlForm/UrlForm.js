@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
 import { postUrls } from '../../apiCalls';
+import { getUrls } from '../../apiCalls';
 
 function UrlForm({addUrl}) {
   const [title, setTitle] = useState('');
   const [urlToShorten, setUrlToShorten] = useState('');
-
-  // function postUrls(longUrl) {
-  //   fetch('http://localhost:3001/api/v1/urls', {
-  //     method: 'POST', 
-  //     headers: {
-  //       "Content-type": "application/json"
-  //     }, 
-  //     body: JSON.stringify(longUrl)
-  //   })
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     addUrl(data)
-  //   })
-  // }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -29,7 +16,9 @@ function UrlForm({addUrl}) {
     .then(res => res.json())
     .then(data => {
       addUrl(data)
+      console.log(data)
     })
+    getUrls()
     clearInputs();
   }
   

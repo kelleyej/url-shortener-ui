@@ -15,12 +15,12 @@ function App () {
   function addUrl(longUrl){
     setUrls([...urls, longUrl])
   }
-console.log('URLS:', urls)
+
   return (
     <main className="App">
       <header>
         <h1>URL Shortener</h1>
-        <UrlForm addUrl={addUrl}/>
+        <UrlForm addUrl={addUrl} />
       </header>
 
       <UrlContainer urls={urls} />
